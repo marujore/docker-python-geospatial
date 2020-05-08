@@ -61,6 +61,15 @@ RUN cd src && tar -xvf gdal-${GDAL_VERSION}.tar.gz && cd gdal-${GDAL_VERSION} \
 
 # Install Python3 packages
 RUN pip3 install rasterio
+RUN pip3 install scikit-image 
+RUN pip3 install matplotlib 
+RUN pip3 install pyproj 
+RUN pip3 install shapely 
+RUN pip3 install geopandas 
+RUN pip3 install pandas 
+RUN pip3 install cmocean
+RUN pip3 install geoarray
+RUN pip3 install arosics
 
 # Output version and capabilities by default.
 CMD gdalinfo --version && gdalinfo --formats && ogrinfo --formats
