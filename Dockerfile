@@ -32,8 +32,6 @@ RUN pip3 install shapely
 RUN pip3 install geopandas
 RUN pip3 install pandas
 RUN pip3 install cmocean
-RUN pip3 install geoarray
-RUN pip3 install arosics
 
 # Output version and capabilities by default.
 CMD gdalinfo --version && gdalinfo --formats && ogrinfo --formats
